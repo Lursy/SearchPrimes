@@ -34,7 +34,6 @@ int main() {
 
     std::vector<bool> primes = is_prime(limit);
 
-    // Use a vector of integers to store the prime numbers.
     std::vector<int> prime_numbers;
     for (int i = 2; i <= limit; i++) {
         if (primes[i]) {
@@ -44,14 +43,12 @@ int main() {
 
     std::sort(prime_numbers.begin(), prime_numbers.end());
 
-    // Print the list of prime numbers.
     for (int i = 0; i < prime_numbers.size(); i++) {
         std::cout << prime_numbers[i] << " ";
     }
 
     std::cout << std::endl;
 
-    // Print the execution time.
     auto end = std::chrono::steady_clock::now();
     std::chrono::duration<double> time_elapsed = end - start;
     std::cout << "Execution time: " << time_elapsed.count() << " seconds" << std::endl;
